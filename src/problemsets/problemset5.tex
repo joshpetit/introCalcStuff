@@ -10,8 +10,11 @@
 \newcommand{\bv}[2]{\big\vert_{#1}^{#2}}
 \usepackage{hyperref}
 \usepackage{amssymb}
+\title{Problem Set \#5}
+\author{Joshua Petitma}
 % Document
 \begin{document}
+    \maketitle
     \section[Question 1]{$\int\frac{x+1}{x^2+2x-3}$}
     \label{sec:1}
     \subsection[1.a]{Solve integral with partial Fraction}
@@ -119,7 +122,7 @@
     \section[Question 4]{Average value = $ \frac{1}{b-a}\int_{a}^{b} f(x)dx$}
     \label{sec:4}
     \subsection[4.a]{Find number(s) b, so a.v of $f(x) = 2 + 6x -3x^2$ on interval [0,b] equal to 3}
-    \label{subsec:4a} % TODO
+    \label{subsec:4a}
     \begin{flalign*}
         \frac{1}{b-0} \int_{0}^{b} 2 + 6x -3x^2 dx = 3 \\
         \frac{1}{b}( 2x + 3x^2 - x^3 )\bv{0}{b} = 3 \\
@@ -177,7 +180,7 @@
         \lim_{a\to0} -a^{1} = 0
     \end{flalign*}
     \subsection[5.c]{$ \int_{-\pi/2}^{\pi/2} \frac{x\cos(x^2)}{(\sin(x^2))^2}$}
-    \label{subsec:5c} % TODO Check if right
+    \label{subsec:5c}
     \begin{flalign*}
         \lim_{a\to0}\int_{-\pi/2}^{a}\frac{x\cos(x^2)}{(\sin(x^2))^2} + \lim_{b\to0}\int_{b}^{\pi/2}\frac{x\cos(x^2)}{(\sin(x^2))^2} \\
         \lim_{b\to0}\frac{1}{2}\int_{b}^{\pi/2}\frac{du}{u^2} && u &= sin(x^2)  &&\\
