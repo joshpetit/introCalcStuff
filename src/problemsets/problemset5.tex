@@ -124,9 +124,12 @@
         \frac{1}{b-0} \int_{0}^{b} 2 + 6x -3x^2 dx = 3 \\
         \frac{1}{b}( 2x + 3x^2 - x^3 )\bv{0}{b} = 3 \\
         \frac{1}{b}(2b + 3b^2 - b^3 - 0) = 3 \\
+        \frac{1}{b}(2b + 3b^2 - b^3 ) = 3 \\
         2 + 3b - b^2 = 3 \\
         -1 + 3b - b^2 = 0 \\
-        -(b^2 - 3b + 1) = 0
+        b = \frac{-3 \pm \sqrt{9 - 4(-1)(-1)}}{-2} \\
+        b = \frac{-3 \pm \sqrt{9-4}}{-2} \\
+        b = \frac{-3 \pm \sqrt{5}}{-2}
     \end{flalign*}
     \subsection[\textbf{4}]{}
     \label{subsec:4.b}
@@ -174,7 +177,7 @@
         \lim_{a\to0} -a^{1} = 0
     \end{flalign*}
     \subsection[5.c]{$ \int_{-\pi/2}^{\pi/2} \frac{x\cos(x^2)}{(\sin(x^2))^2}$}
-    \label{subsec:5c} % TODO
+    \label{subsec:5c} % TODO Check if right
     \begin{flalign*}
         \lim_{a\to0}\int_{-\pi/2}^{a}\frac{x\cos(x^2)}{(\sin(x^2))^2} + \lim_{b\to0}\int_{b}^{\pi/2}\frac{x\cos(x^2)}{(\sin(x^2))^2} \\
         \lim_{b\to0}\frac{1}{2}\int_{b}^{\pi/2}\frac{du}{u^2} && u &= sin(x^2)  &&\\
@@ -182,6 +185,7 @@
         \frac{1}{2}\lim_{b\to0}(- u^{-1}) \bv{b}{\pi/2}&& \frac{1}{2}du &= xcos(x^2) &&\\
         \frac{1}{2}\lim_{b\to0}(-\frac{1}{\sin(x^2)})\bv{b}{\pi/2} \\
         \frac{1}{2} (-\frac{1}{sin(\pi/4)} + \frac{1}{sin(0)}) \\
+        \frac{1}{\sin(0)} = \frac{1}{0} \to \infty \therefore Divergent
     \end{flalign*}
 
 \end{document}
