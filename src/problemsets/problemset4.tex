@@ -1,0 +1,214 @@
+%! Author = joshu
+%! Date = 9/9/20
+
+% Preamble
+\documentclass[11pt]{article}
+\author{Joshua Petitma}
+\title{Problem Set \#4}
+\date{}
+% Packages
+\usepackage{amsmath}
+\usepackage{amssymb}
+\newcommand{\bv}[2]{\big\vert_{#1}^{#2}}
+% Document
+\begin{document}
+    \maketitle
+    \textbf{I tried}
+    \begin{enumerate}
+        \item \Large $f(0) = 1, f(2)= 5, f(4) = 3,\ and \int_{0}^{2}f(t)dt = 10$\\
+        \begin{enumerate}
+            \item \Large  $\frac{d}{dx}\int_{0}^{x}f(t)dt$ at x = 2 \label{q:1a}
+            \begin{align*}
+                \label{eq:1a}
+                f(x) * 1,\ x=2 \\
+                f(2) = 5
+            \end{align*}
+            \item \Large ${\frac{d}{dx}}\int_{0}^{\sqrt{x}}f(t)dt$ at x =4 \label{q:1b}
+            \begin{align*}
+                \label{eq:1b}
+                f(\sqrt{x}) * \frac{1}{2\sqrt{x}},\ x=4 \\
+                f(2)*\frac{1}{2*2} \to 5 * \frac{1}{4} = \frac{5}{4}
+            \end{align*}
+            \item \Large ${\frac{d}{dx}}\int_{0}^{x}\sqrt{f(t)}dt $ at x = 2 \label{q:1c}
+            \begin{align*}
+                \label{eq:1c}
+                \sqrt{f(x)}*1,\ x=4 \\
+                \sqrt{f(4)} = \sqrt{3}
+            \end{align*}
+            \item \Large ${\frac{d}{dx}}\int_{0}^{2}f(t)dt$ \label{q:1d}
+            \begin{align*}
+                \label{eq:1d}
+                \int_{0}^{2}f(t)dt &= 10 \\
+                \frac{d}{dx}(10) &= 0
+            \end{align*}
+            \item \Large ${\int_{0}^{4} \frac{d}{dt}f(t)dt}$\label{q:1e}
+            \begin{align*}
+                \label{eq:1e}
+                f(t)\arrowvert_{0}^{4} \\
+                f(4) - f(0) \\
+                3 - 1 = 2
+            \end{align*}
+            \item \Large ${\frac{d}{dx}(x^2 \int_{0}^{x}f(t)dt)}$ at x = 2 \label{q:1f}
+            \begin{align*}
+                \label(eq:1f)
+                f'(x) = \int_{0}^{t}dt * 2x  \text{This line glitches idk how to fix it} \\
+                x^2*f(x) + \int_{0}^{x}f(t)dt * 2x,\text{ x = 2} \\
+                4*f(2) + \int_{0}^{2}f(t)dt * 4 \\
+                4*5 + 10 * 4 = 60
+            \end{align*}
+        \end{enumerate}
+        \item
+        \begin{enumerate}
+            \item \Large${\int_{0}^{\pi/2}h'(4\sin(x))\cos(x)}$\label{q:2a}
+            \begin{align*}
+                \label{eq:2a}
+                \frac{1}{4}\int_{0}^{4}h'(u)du  && u = 4\sin(x) \\
+                \frac{1}{4}(h(u)\arrowvert_{0}^{4}) && du = 4\cos(x) \\
+                \frac{1}{4}(h(4) - h(0)) && \frac{1}{4}du = cos(x) \\
+                \frac{1}{4}(5 - 8) = -\frac{3}{4}
+            \end{align*}
+            \item \Large${\int_{2}^{4}e^{h'(x)}h''(x)dx}$ \label{q:2b}
+            \begin{align*}
+                \label{eq:2b}
+                \int_{}^{}e^{u}du && u &= h'(x) \\
+                \int_{1}^{3}e^{u}du && du &= h''(x) \\
+                e^u \arrowvert_{1}^{3} \\
+                e^3 - e
+            \end{align*}
+            \item \Large$\int_{\ln(2)}^{\ln(4)}h(e^x)e^{x}dx $ \label{q:2c}
+            \begin{align*}
+                \label{eq:2c}
+                \int_{2}^{4}h(u)du && u = e^x\\
+                && du = e^x \\
+                \int_{2}^{4}h(u)du &= \int_{0}^{4}h(x)dx - \int_{0}^{2}h(x)dx \\
+                &= 12 - 6 \\
+                &= 6
+            \end{align*}
+            \item \Large$\int_{e}^{e^2}\frac{h(\ln(x))}{x}dx $ \label{q:2d}
+            \begin{align*}
+                \label{eq:2d}
+                \int_{1}^{2}h(u)du && u = ln(x) \\
+                && du = \frac{1}{x} \\
+                \int_{1}^{2}h(u)du &= \int_{0}^{2}h(x)dx - \int_{0}^{1}h(x)dx \\
+                &= 6 - 2 \\
+                &= 4
+                \\
+            \end{align*}
+        \end{enumerate}
+        \item Let $g(x) = \int_{2}^{x^2}e^{t^2}$ \label{q:3}
+        \begin{enumerate}
+            \item Find tangent of $g(x)$ at $x = \sqrt{2}$
+            \begin{align*}
+                \label{eq:3a}
+                g'(x) &= e^{x^4}*2x,\ x=\sqrt{2} \\
+                g'(\sqrt{2}) &= e^{4} * 2\sqrt{2} && g(\sqrt{2})=\int_{2}^{2}e^{t^2} \to 0 \\
+                y + 0 &=  e^{4} * 2\sqrt{2}(x - \sqrt{2}) \\
+                y &= e^4*2\sqrt{2}x - 4e^4
+            \end{align*}
+            \item Approximate $\int_{2}^{(\sqrt{2}+0.5)^2}e^{t^2}dt$ with the tangent line over or under? \label{q:3b}
+            \begin{align*}
+                \label{eq:3b}
+                x = \sqrt{2} + 0.5 \\
+                y &= e^4*2\sqrt{2}(\sqrt{2} + 0.5 - \sqrt{2}) \\
+                y &= e^4*2\sqrt{2}(.5) \\
+                y &= \sqrt{2}*e^4 \\
+            \end{align*}
+            \item Is (b) an under or over estimate? \label{q:3c} \\ \\
+            $g''(x) = 2e^{x^4} + 4x^{3}e^{x^4}$ \\
+            $g''(x) > 0\ \ over\ \ 2<x<(\sqrt{2}+0.5)^2$  \\ \therefore \text{Tangent line is an underestimation}
+
+            \item $\sum$ vs $g(3)$
+            \begin{align*}
+                \label{eq:3d}
+                \frac{1}{2}\sum_{2}^{15} e^{(2+ \frac{k-1}{2})^2} \\
+                \triangle x = .5 && k = 2 \\
+                f(x_{k}) = {(2+ \frac{k-1}{2})} \\
+                f(x_{k}) = {(2+ \frac{2-1}{2})}&& k = 2\\
+                 = 2.5 \\
+                f(x_{k}) = ( 2 + \frac{15-1}{2}) && k = 15 \\
+                = 9 \\
+                2.5 \to 9\\
+                g(3) = \int_{2}^{9} e^{t^2}dt \\
+                \sum = RHS\ \text{Because at $k=2,\ f(x_{k}) = 2.5  $}\\
+                g'(x) > 0\ \ over\ 2 < x < 9 \\
+                \text{RHS' are overestimates when increasing} \\
+                \therefore  \sum > g(3)
+            \end{align*}
+            \item g(x) vs h(x)
+            \begin{align*}
+                \label{eq:3e}
+                \lim_{x\to\infty} \frac{g(x)}{h(x)} = \frac{\infty}{\infty} \therefore LH\\
+                \lim_{x\to\infty} \frac{g'(x)}{h'(x)} = \lim_{x\to\infty}\frac{e^{x^4}*2x}{e^{x^4}} = 2x \to \infty \\
+                \text{$g(x)$ dominates because $\lim_{x\to\infty}\frac{g(x)}{h(x)} \to \infty$}
+                \\
+            \end{align*}
+        \end{enumerate}
+        \item Evaluate:
+        \begin{enumerate}
+            \item \Large$\int_{0}^{1}xf''(x)dx $\label{q:4a}
+            \begin{align*}
+                \label{eq:4a}
+                xf'(x)\big\vert_{0}^{1} - \int_{0}^{1}f'(x)dx && u &= x & dv &= f''(x) \\
+                (1f'(1) - 0) - f(x)\big\vert_{0}^{1}&& du &= 1 & v &= f'(x) \\
+                -2 - (f(1) - f(0))\\
+                -2 - (4 - 10) = 4
+            \end{align*}
+            \item \Large$\int_{0}^{1}f''(x)(f'(x))^{2}$
+            \begin{align*}
+                \int_{1}^{-2}u^{2}du && u = f'(x) \\
+                -\int_{-2}^{1}u^{2}du && du = f''(x) \\
+                -(\frac{u^3}{3}\bv{-2}{1}) \\
+                -(\frac{1}{3} + \frac{8}{3}) = -3
+            \end{align*}
+            \item $\int_{0}^{1} x^2 f''(x)$\\
+            \begin{align*}
+                \label{eq:4c}
+                x^{2}f'(x)\bv{0}{1} - \int_{0}^{1}2xf'(x) && u = x^2 && dv = f''(x) \\
+                (1^2*-2) - 0 - \int_{0}^{1}2xf'(x) && du = 2x && v = f'(x) \\
+                && u = 2x  && dv = f'(x)\\
+                && du = 2  && v = f(x)\\
+                -2 - ((2xf(x) \bv{0}{1}) - \int_{0}^{1}2f(x))\\
+                -2 - (8 - 2(3)) = -4
+%                -2 - \frac{1}{2}(\frac{u^2}{2}\bv{0}{2})\\
+%                -2 - \frac{1}{2} (2) = -3
+            \end{align*}
+            \item $\int_{0}^{1} \frac{f''(x)}{f'(x)}$
+            \begin{align*}
+                \label{eq:4d}
+                \int_{1}^{-2} \frac{1}{u}du && u = f'(x) \\
+                -\int_{-2}^{1} \frac{1}{u}du&& du = f''(x) \\
+                -\ln{u}\bv{-2}{1}\\
+                0 + \ln|-2| = \ln(2)
+            \end{align*}
+        \end{enumerate}
+        \item
+        \begin{enumerate}
+            \item
+            \begin{align*}
+                \label{eq:5a}
+                f(1) = \int_{0}^{1} \frac{dt}{(t+1)(t+2)} \\
+                \frac{A}{(t+1)} + \frac{B}{t+2}  = \frac{1}{\mathellipsis} \\
+                A(t+2) + B(t+1) = 1 \\
+                B(-2 + 1) = 1 && x = -2 \\
+                B = -1 \\
+                A = 1 && x = -1 \\
+                \int_{0}^{1} \frac{1}{t+1} - \frac{1}{t+2} dt \\
+                \ln(t+1) - ln(t+2) \bv{0}{1} \\
+                \ln(\frac{t+1}{t+2}) \bv{0}{1} \\
+                \ln(\frac{2}{3}) - \ln(\frac{1}{2}) \\
+                \ln(\frac{4}{3}) \\
+            \end{align*}
+            \item h'(1)
+            \begin{align*}
+                \label{eq:5b}
+                h'(x) &= g'(f(x))  f'(x) \\
+                h'(1) &= g'(f(1))  f'(1) && f'(x) = \frac{1}{(x+1)(x+2)}\\
+                h'(1) &= g'(\ln(\frac{4}{3})) *\frac{1}{6} && f'(1) = \frac{1}{6} \\
+                h'(1) &= \sin(\frac{\pi}{2}) * \frac{1}{6} && g'(x) = \sin(\frac{3}{8}\pi e^x) \\
+                h'(1) &= \frac{1}{6} && g'(\ln(\frac{4}{3})) = \sin(\frac{3}{8}\pi * \frac{4}{3})=  \sin(\frac{\pi}{2}) \\
+            \end{align*}
+        \end{enumerate}
+    \end{enumerate}
+
+
+\end{document}

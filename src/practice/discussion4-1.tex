@@ -1,0 +1,36 @@
+%! Author = joshu
+%! Date = 9/8/20
+
+% Preamble
+\documentclass[11pt]{article}
+
+% Packages
+\usepackage{amsmath}
+
+% Document
+\begin{document}
+    eyeet
+    \begin{enumerate}
+        \item \\
+        \subitem A
+    \begin{align*}
+        \int_{0}^{10}{\frac{e^{-\sqrt{x}}}{\sqrt{x}}} &&
+        u &= \sqrt{x} \\ &&
+        du &= \frac{1}{2}x^{-1/2} \\
+        2\int_{0}^{\sqrt{10}}e^{-u}du \\
+        2(-e^{-u} -1)\big\vert_{0}^{\sqrt{10}} \\
+        2(-e^{-10} -1) - (1-1) \\
+        2(-e^{-\sqrt{10}} + 1)
+    \end{align*}
+        \subitem B
+        \begin{align*}
+            \int_{0}^{\infty}\frac{x}{e^x}dx &= \int_{0}^{\infty}xe^{-x} \\
+            &=-xe^{-x}\arrowvert_{0}^{\infty} \\
+            &= 0-0 + \int_{0}^{\infty}e^{-x} \\
+            &= -e^{-x}\arrowvert_{0}^{\infty} \\
+            &= 0 +1 = 1
+        \end{align*}
+
+    \end{enumerate}
+
+\end{document}

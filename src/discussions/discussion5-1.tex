@@ -1,0 +1,94 @@
+%! Author = joshu
+%! Date = 9/15/20
+
+% Preamble
+\documentclass[11pt]{article}
+
+\renewcommand{\thesubsection}{\thesection.\alph{subsection}}
+\newcommand{\bv}[2]{\big\vert_{#1}^{#2}}
+\usepackage{hyperref}
+% Packages
+\usepackage{amsmath}
+
+% Document
+\begin{document}
+    \section[Question 1]{If we roll a fair die, waht is the probability that after 6 rolls we:}
+    \label{sec:1}
+    \subsection[1.a]{Do not get a 6?}
+    \label{subsec:1a}
+    \begin{flalign*}
+        P(A^c) &= (\frac{5}{6})^6 && \\
+    \end{flalign*}
+    \subsection[1.b]{Get a 6 on the first roll, but not after?}
+    \label{subsec:1b}
+    \begin{flalign*}
+        P(A) = \frac{1}{6} * (\frac{5}{6})^5 &&
+    \end{flalign*}
+    \subsection[1.c]{Get Exactly one 6}
+    \label{subsec:1c}
+    \begin{flalign*}
+        P(A) = (\frac{5}{6})^5 &&
+    \end{flalign*}
+    \section[Question 2]{Suppose you roll 2 fair six sided dice.}
+    \label{sec:2}
+    \subsection[2.a]{Find P(A) and P(B)}
+    \label{subsec:2a}
+    \begin{flalign*}
+        P(A) = \frac{15}{36} \\
+        P(B) = \frac{8}{36} = \frac{2}{9}
+    \end{flalign*}
+    \subsection[2.b]{}
+    \label{subsec:2b}
+    \begin{flalign*}
+        P(A \bigcap B)&= P(A) * P(B) \\
+        P(A \bigcap B) &= \frac{2}{36} = \frac{1}{18} \\
+        P(A) * P(B) &= \frac{15}{36} * \frac{2}{9} \\
+        P(A \bigcap B) &\neq \frac{5}{54}\\
+        \text{Not independent}
+    \end{flalign*}
+    \subsection[2.c]{}
+    \label{subsec:2c}
+    \begin{flalign*}
+        P(A \bigcup B \text{ 25 \% of time}) = \frac{19}{36} * P(A^c\bigcup B^c)\\
+        4*\frac{19}{36} * (\frac{17}{36})^3
+    \end{flalign*}
+
+    \section[Question 3]{}
+    \label{sec:3}
+    \subsection[3.a]{}
+    \label{subsec:3a}
+    \begin{flalign*}
+        S = \{TTT, TTH, THH, HHH \} \\
+        X = \{-6, 1 - 4, 4-2, 9 \} \\
+        X = \{-6, -3, 2, 9 \} \\
+    \end{flalign*}
+    \subsection[3.b]{Find probability mass density}
+    \label{subsec:3b}
+    \begin{flalign*}
+        p(-6) = \frac{1}{8} * -6 = \frac{-6}{8}\\
+        p(-3) = \frac{3}{8} * -3 = \frac{-9}{8}\\
+        p(2) = \frac{3}{8}  * 2 = \frac{6}{8}\\
+        p(9) = \frac{1}{8} * 9 = \frac{9}{8}\\
+        E = 0
+    \end{flalign*}
+    \subsection[3.c]{E}
+    \label{subsec:3c}
+    \begin{flalign*}
+        E(x) = \frac{-6}{8} -  \frac{-9}{8} +  \frac{6}{8}
+        +  \frac{9}{8} = 0
+    \end{flalign*}
+    \section[Question 4]{}
+    \label{sec:4}
+    \subsection[4.a]{}
+    \label{subsec:4a}
+    \begin{flalign*}
+        S = \{3, 4, 5\} \\
+        p(3) = \frac{1}{10} * \frac{2}{9} = \frac{2}{90} \\
+        p(4) = \frac{8}{45}
+    \end{flalign*}
+
+
+
+
+
+\end{document}

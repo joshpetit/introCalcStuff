@@ -1,0 +1,204 @@
+%! Author = joshu
+%! Date = 9/14/20
+
+% Preamble
+\documentclass[11pt]{article}
+
+\renewcommand{\thesubsection}{\thesection.\alph{subsection}}
+\newcommand{\bv}[2]{\big\vert_{#1}^{#2}}
+% Packages
+\usepackage{hyperref}
+\usepackage{amsmath}
+
+% Document
+\begin{document}
+    \part[Introduction to Probability]{Introduction to Probability}
+    \label{null:introduction-to-probability}
+    \section[Definitions]{Definitions}
+    \begin{enumerate}
+        \item Experiment - A well defined procedure (rolling a die, flipping a coin)
+        \item Sample Space - The set of all possible outcomes for particular experiment
+        \item Event - A subset of the sample space, subset of outcomes possible
+    \end{enumerate}
+
+    \paragraph[Example]{Example: } Rolling a six-sided fair die
+
+    \begin{itemize}
+        \item Sample Space: $S = \{1, 2, 3, 4, 5, 6\}$
+        \item Possible Events:
+        \subitem \textmd{A = ``you roll an even number'' A = \{2, 4, 6\}\\
+        P(A) = 3/6 = 1/2}
+        \subitem \textmd{B = ``you roll a \# less than 5" \to B = \{1,2,3,4\}
+        \subitem $P(B) = 4/6 = 2/3 $}
+    \end{itemize}
+    \section[Principles]{Principles}
+    \label{sec:principles}
+    \begin{enumerate}
+        \item $0\leq P(event) \leq 1$
+        \item $\sum P(outcome) = 1$ The sum of all the outcomes must equal 1,
+        Something has to happen
+    \end{enumerate}
+
+    \paragraph[Example]{Example: } Suppose a 4 sided die has sides A, B, C, and D.
+    You roll it twice
+    \begin{enumerate}
+        \item Find the sample space \\
+        $S = \{AA, AB, AC, AD, BA, BB, BC, BD, CA, CB, CC, CD, DA, DB, DC, DD\}$
+        \item Find the following probabilities:
+        \subitem P(you roll 2 As) = $\frac{1}{16}$
+        \subitem P($1^{st}$ roll is A) = $\frac{1}{4}$
+        \subitem P(at least one roll is A) = $\frac{7}{16}$
+        \subitem P(roll at least on A or at least one B) = $\frac{12}{16} = \frac{3}{4}$
+    \end{enumerate}
+
+    \part[Probability Rules and Independence]{Probability Rules and Independence}
+    \section[Rules]{Rules}
+    \begin{itemize}
+        \item Addition Rule: P(A or $\bigcup$ B) = P(A) + P(B) - P(A and $\bigcap$ B)
+
+        We subtract the intersection (P $\bigcap$ B)because A and B are already counted.
+        Think of a Ven diagram
+        \begin{itemize}
+            \item P(you roll at least one A or at least one B)
+            \subitem P(you roll at least one A) + P (you roll at least one B)
+            \\ AA, AB, AC, AD, BA, CA, DA +BA, BB, BC, BD, AB, CB, DB
+            \item P(you roll at least one A and at least one B)
+            \item P (you roll at least one A or at least on B)
+        \end{itemize}
+        \item Complement Rule: P($A^c$) = 1 - P(A) \\
+        $X^C$ = All outcomes that do not satisfy X
+        \\
+        Ex: P(you roll at least on A or at least one B) = 1- P(no A and no B)
+    \end{itemize}
+    \section[Independence]{Independence}
+    \paragraph[Definition]{Definition: } Events A and B are independent if
+    $P(A\bigcapB) = P(A)P(B)$
+    \paragraph[Example]{Example: }Flip a fair coin twice. Then
+    $S = \{HH, HT, TH, TT\}$
+    \begin{itemize}
+        \item A = $1^{st}$ toss is heads $\to A= \{HH, HT\}$ P(A) = 1/2
+        \item B = $2^{nd}$ toss is heads $\to B= \{HH, TH\}$ P(B) = 1/2
+        \item C = both tosses are heads $\to C= \{HH\}$ P(C) = 1/4
+    \end{itemize}
+    Then:
+    \begin{itemize}
+        \item A and B are independent:
+        $P(A\bigcap B) = \frac{1}{4} = P(A)P(B) = \frac{1}{2}* \frac{1}{2} = \frac{1}{4}$
+        \item A and C are not indepndent:
+        $P(A\bigcap C) = \frac{1}{4} \neq P(A)P(C) = \frac{1}{2} * \frac{1}{4}$
+    \end{itemize}
+    \part[Random Variables and Mass Density Functions]{Random Variables and Mass Density Functions}
+    \paragraph[Definition]{Definition: } A random variable, X, is a function
+    that assigns a real number to each element of the
+    sample space. The \underline{mass density function} of X
+    is the function defined by
+    $p(k) = P(x=k)$
+
+    \paragraph[Example]{Example: } Flip a fair coin twice. Let X be
+    the \# of heads.
+
+    \begin{align*}
+        HH \to 2 && HT \to 1 && TH \to 1 && TT \to 0
+    \end{align*}
+    The range of X is \{0, 1, 2\}. The mass density function of
+    X is:
+    \begin{itemize}
+        \item $p(0) = \frac{1}{4} = P(x=0)$
+        \item $p(1) = \frac{2}{4} = P(x=1)$
+        \item $p(2) = \frac{1}{4} = P(x=2)$
+    \end{itemize}
+    \paragraph[Example]{Example: } Roll two six-sided dice.
+    Let $Y$ equal the sum of all the rolls.
+    Find the mass density function of Y.
+    \begin{itemize}
+        \item The range of Y is \{2, 3, 4, ..., 12\}
+        \subitem $p(2) = \frac{1}{36} = p(12)$
+        \subitem $p(3) = \frac{2}{36} =p(11)$
+        \subitem $p(4) = \frac{3}{36} = p(10)$
+        \subitem $p(5) = \frac{4}{36}= p(9)$
+        \subitem $p(6) = \frac{5}{36} = p(8)$
+        \subitem $p(7) = \frac{6}{36}$
+
+        $ \sum_{k=2}^{12} p(k) = 1$
+    \end{itemize}
+    \part[Expected Value]{Expected Value}
+    Supposed a group of students has the following 7 quiz scores:
+
+    3, 5, 8, 8, 8, 10, 10
+
+    The average quiz score is:
+
+    $\frac{3+5+8+8+8+10+10}{7} = \frac{52}{7}$
+
+    Alternatively, we could find the average score by using
+    a weighted average:
+
+    $3(\frac{1}{7}) + 5(\frac{1}{7}) + 8(\frac{3}{7} + 10(\frac{2}{7}) = \frac{52}{7})$
+
+    \paragraph[Definition]{Definition: } Suppose random variable X takes on values
+    $x_1, x_2, ..., x_n$ Then the expected value of X is
+    \begin{align*}
+        E[X] = \sum_{k=1}^{n} x_k P(X=x_k) = \sum_{k=1}^{n} x_{k}p(x_k)
+    \end{align*}
+
+    \paragraph[Example]{Example: } Flip a fair coin 3 times.
+    be the \# of heads. Find $E[X]$
+    \begin{align*}
+        S = \{HHH, HHT, HTH, THH, TTH, THT, HTT, TTT \}
+    \end{align*}
+    \begin{itemize}
+        \item range of X is $\{0,1,2,3\}$
+        \item mass density function:
+        \subitem $p(0) = \frac{1}{8}$
+        \subitem $p(1) = \frac{3}{8}$
+        \subitem $p(2) = \frac{3}{8}$
+        \subitem $p(3) = \frac{1}{8}$
+    \end{itemize}
+    \begin{align*}
+        E[X] &= (0)+p(0) + (1)+p(1) + (2)p(2) + (3)p(3) \\
+        &= (1)\frac{3}{8} + (2)\frac{3}{8} + (3)\frac{1}{8} \\
+        &= \frac{1}{8}(3+6+3) = \frac{12}{8} = \frac{3}{2}
+    \end{align*}
+
+    \part[Expected Value Examples]{Expected Value Examples}
+    \paragraph[Example]{Example: } Flip a fair coin 3 times.
+    Let$Y = #$ of heads multiplied by the # of tails, Find $E[Y]$
+    \begin{itemize}
+        \item range of $Y= \{0, 2\}$
+        \item mass density function
+        \subitem $p(0) = 2/8 = 1/4$
+        \subitem $p(2) = 6/8 = 3/4$
+    \end{itemize}
+    $E[Y] = 0p(0) + 2p(2) = 2(\frac{3}{4} = \frac{3}{2})$
+
+    \paragraph[Example]{Example: } Supposed you play a game where you roll two six-sided dice.
+    If the sum of the rolls is $> 9$, you win two dollars.
+    Otherwise you lose $c$.
+    Find the $c$ so that this is a fair game.
+    Let $X$ be your winnings.
+    \begin{itemize}
+        \item The range of $X = \{2, -c\}$ Either win two dollars are lose c dollars
+        \subitem $p(2) = \frac{3}{36} + \frac{2}{36} + \frac{1}{36} = \frac{1}{6}$
+        \subitem $p(-c) = \frac{5}{6}$ Complement rule
+    \end{itemize}
+    $E[X] = 2p(2) + (-c)p(c) = 2(\frac{1}{6}) - c(\frac{5}{6})$
+    $c = \$\frac{2}{5}$
+    \paragraph[Example]{Example: } Supposed you keep flipping a pair of coints until you see HH.
+    Let $X$ be the \# of times you need to toss the pair for this to occur
+    \begin{itemize}
+        \item What is the range of X?
+        \subitem $\{1,2,3,4, ...\} \to$ infinitely many values of X
+        \item Find the mass density function
+        \subitem $p(1) = \frac{1}{4}$
+        \subitem $p(2) = \frac{3}{4} \frac{1}{4}$
+        \subitem $p(3) = \frac{3}{4} \frac{3}{4} \frac{1}{4} = \frac{3}{4}^2(\frac{1}{4})$
+        \subitem $p(k) = (\frac{3}{4})^{k-1}(\frac{1}{4})$
+    \end{itemize}
+    We know
+    $ \sum_{k=1}^{\infty} p(k) =1$ (From probability principles)
+    This means
+    \begin{align*}
+        \sum_{k=1}^{\infty} (\frac{3}{4})^{k-1}(\frac{1}{4}) = 1.
+    \end{align*}
+    How would we know this without the context of probability?
+\end{document}
