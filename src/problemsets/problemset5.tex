@@ -63,17 +63,17 @@
     \begin{flalign*}
         \int_{-2}^{0}f(x) = 3 \\
         \int_{0}^{1}f(x) = \int_{-1}^{0} f(x) = 1  \\
-        \int_{-2}^{0}f(x) + \int_{-1}^{0}f(x) = \int_{-2}^{-1} f(x) \\
-        3 + 1 = \int_{-2}^{-1} f(x) \\
-        \int_{-2}^{-1} f(x) = 4
+        \int_{-2}^{0}f(x) - \int_{-1}^{0}f(x) = \int_{-2}^{-1} f(x) \\
+        3 - 1 = \int_{-2}^{-1} f(x) \\
+        \int_{-2}^{-1} f(x) = 2
     \end{flalign*}
     \subsection[2.c]{$ \int_{-1}^{2} xf(x)$}
     \label{subsec:2c}
     \begin{flalign*}
-        \int_{0}^{1} xf(x)dx = \int_{-1}^{0} xf(x)dx = \frac{1}{2} \\
-        \int_{-1}^{2} xf(x) &= \int_{-1}^{0} + \int_{0}^{2} xf(x)dx \\
-        &= \frac{1}{2} + 4 \\
-        &= \frac{9}{2}
+        &\int_{0}^{1} xf(x)dx = \int_{-1}^{0} xf(x)dx = -\frac{1}{2} \\
+        \int_{-1}^{2} xf(x) &= \int_{-1}^{0}xf(x) + \int_{0}^{2} xf(x)dx \\
+        &= -\frac{1}{2} + 4 \\
+        &= \frac{7}{2}
     \end{flalign*}
     \section[Question 3]{f(x) and f'(x) are continuous. Use the table}
     \label{sec:3}
@@ -87,28 +87,25 @@
     \subsection[3.b]{$\int_{0}^{2} (f'(x)\sin(x) + f(x)\cos(x))$}
     \label{subsec:3b}
     \begin{flalign*}
+        \int_{0}^{2} f'(x)sin(x)dx + \int_{0}^{2} f(x)cos(x)\\
         \int_{0}^{2} f'(x)sin(x)dx && u = \sin(x)\ && dv = f'(x) \\
         && du = cos(x)\ && v = f(x) \\
         f(x)\sin(x)\bv{0}{2} - \int_{0}^{2} f(x)cos(x)dx \\
         f(2)sin(2) - f(0)sin(0) - \int_{0}^{2} f(x)cos(x)dx \\
-        8\sin(2) - \int_{0}^{2} f(x)cos(x)\\
-        \\
-        \int_{0}^{2} f(x)cos(x)dx   && u = f(x) && dv = cos(x) \\
-        -\sin(x)f(x)\bv{0}{2} - \int_{0}^{2} sin(x)f'(x)dx && du = f'(x) && v = -\sin(x) \\
-        -\sin(2)f(2) + sin(0)f(0) +\int_{0}^{2} sin(x)f'(x)dx\\
-        -8\sin(2) + \int_{0}^{2} sin(x)f'(x)dx\\
-        \\
-        \int_{0}^{2} f'(x)sin(x)dx = 8sin(2) - \int_{0}^{2} f(x)cos(x) \\
-        \int_{0}^{2} f'(x)sin(x)dx = 8sin(2) - (-8\sin(2) + \int_{0}^{2} sin(x)f'(x)dx)\\
-        \text{Which just simplifies to 0 ... dang}
+        8\sin(2) - \int_{0}^{2} f(x)cos(x) + \int_{0}^{2} f(x)cos(x)\\
+        8sin(2)
     \end{flalign*}
     \subsection[3.c]{$ \int_{0}^{3} \frac{f'(x)e^x - f(x)e^x}{(e^x)^2}dx$}
     \label{subsec:3c}
     \begin{flalign*}
-        && u = f(x)e^x \\
-        && du = f(x)e^x + e^{x}f'(x) \\
-        && du = e^x(f(x) + f'(x)) \\
-        \int_{0}^{3} \frac{f'(x)}{e^x} - \int_{0}^{3} \frac{f(x)}{e^x}
+        \int_{0}^{3} \frac{f'(x) - f(x)}{e^x}dx && \\
+        \int_{0}^{3} \frac{f'(x)}{e^x} - \int_{0}^{3} \frac{f(x)}{e^x} \\
+        u = e^{-x} && dv = f'(x)&& &&\\
+        du = -e^{-x} && v = f(x) \\
+        \frac{f(x)}{e^{x}} \bv{0}{3} + \int_{0}^{3}  \frac{f(x)}{e^{x}} \\
+        \frac{f(3)}{e^{3}} - \frac{f(0)}{1} + \int_{0}^{3} \frac{f(x)}{e^{x}} - \int_{0}^{3} \frac{f(x)}{e^x} \\
+        \frac{9}{e^{3}} - 3 \\
+        9e^{-3} - 3
     \end{flalign*}
     \subsection[3.d]{$ \int_{0}^{1} f(x)f'(x)$}
     \label{subsec:3d}
@@ -122,7 +119,7 @@
     \section[Question 4]{Average value = $ \frac{1}{b-a}\int_{a}^{b} f(x)dx$}
     \label{sec:4}
     \subsection[4.a]{Find number(s) b, so a.v of $f(x) = 2 + 6x -3x^2$ on interval [0,b] equal to 3}
-    \label{subsec:4a}
+    \label{subsec:4a} % TODO
     \begin{flalign*}
         \frac{1}{b-0} \int_{0}^{b} 2 + 6x -3x^2 dx = 3 \\
         \frac{1}{b}( 2x + 3x^2 - x^3 )\bv{0}{b} = 3 \\
@@ -132,9 +129,16 @@
         -(b^2 - 3b + 1) = 0
     \end{flalign*}
     \subsection[\textbf{4}]{}
-    \label{subsec:4b}
+    \label{subsec:4.b}
     \begin{flalign*}
-        \frac{4+5}{2} = \frac{9}{2}
+        \frac{1}{8-1}\int_{1}^{8} f(x)dx \\
+        \int_{1}^{6} f(x) &= 5 * A.V(1 <x < 6) && \text{Equals inverse of $\frac{1}{b-a} * value$} &&\\
+        & = 5 *4 =  20 \\
+        \int_{6}^{8} f(x) &= 2 * A.V(6 <x < 8) \\
+        & = 2(5) = 10 \\
+        \frac{1}{7} \int_{1}^{8} f(x) &= \frac{1}{7} ( \int_{1}^{6} f(x) + \int_{6}^{8} f(x)) \\
+        &= \frac{1}{7} *(20 + 10)\\
+        &= \frac{30}{7}
     \end{flalign*}
     \section[Question 5]{}
     \label{sec:5}
@@ -166,16 +170,18 @@
         \lim_{a\to0}\frac{ln(x)}{\frac{1}{x}}\bv{a}{e} -  \lim_{a\to0}x\bv{a}{e} \\
         LH \frac{1}{1/e} - \frac{\ln(a)}{1/a} - e \\
         e -  \frac{1/a}{-1/a^2} - e \\
-        \lim_{a\to0}\frac{a^{-1}}{-a^{-2}}
+        \lim_{a\to0}\frac{a^{-1}}{-a^{-2}}\\
+        \lim_{a\to0} -a^{1} = 0
     \end{flalign*}
     \subsection[5.c]{$ \int_{-\pi/2}^{\pi/2} \frac{x\cos(x^2)}{(\sin(x^2))^2}$}
-    \label{subsec:5c}
+    \label{subsec:5c} % TODO
     \begin{flalign*}
         \lim_{a\to0}\int_{-\pi/2}^{a}\frac{x\cos(x^2)}{(\sin(x^2))^2} + \lim_{b\to0}\int_{b}^{\pi/2}\frac{x\cos(x^2)}{(\sin(x^2))^2} \\
         \lim_{b\to0}\frac{1}{2}\int_{b}^{\pi/2}\frac{du}{u^2} && u &= sin(x^2)  &&\\
         \lim_{b\to0}\frac{1}{2}\int_{b}^{\pi/2}u^{-2} && du &= 2xcos(x^2) &&\\
         \frac{1}{2}\lim_{b\to0}(- u^{-1}) \bv{b}{\pi/2}&& \frac{1}{2}du &= xcos(x^2) &&\\
-        \frac{1}{2}\lim_{b\to0}(-\frac{1}{\sin(x^2)})\bv{b}{\pi/2}
+        \frac{1}{2}\lim_{b\to0}(-\frac{1}{\sin(x^2)})\bv{b}{\pi/2} \\
+        \frac{1}{2} (-\frac{1}{sin(\pi/4)} + \frac{1}{sin(0)}) \\
     \end{flalign*}
 
 \end{document}
