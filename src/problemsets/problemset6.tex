@@ -3,6 +3,9 @@
 
 % Preamble
 \documentclass[11pt]{article}
+\title{Problem Set \# 6}
+\author{Joshua Petitma}
+\date{09/24/20}
 \renewcommand{\thesubsection}{\thesection.\alph{subsection}}
 \newcommand{\bv}[2]{\big\vert_{#1}^{#2}}
 \usepackage{xcolor,cancel}
@@ -16,6 +19,7 @@
 
 % Document
 \begin{document}
+    \maketitle
     \section[Question 1]{}
     \label{sec:1}
     \subsection[1.a]{}
@@ -118,12 +122,11 @@
     \subsection[3.b]{Roll twice, $P(2X \leq 2Y - 5)$}
     \label{subsec:3b}
     \begin{flalign*}
-        P(\leq 2 \bigcap > 3) &= (c + \frac{c}{2}) * (\frac{c}{4} + \frac{c}{5} + \frac{c}{6}) && \\
-        &= (\frac{3c}{2}) * (\frac{c}{4} + \frac{c}{5} + \frac{c}{6}) && \\
-        &= \frac{3c^2}{8} + \frac{3c^2}{10} + \frac{c^2}{2} \\
-        &= \frac{47c^2}{40} \\
-        P(3 \bigcap 6) &= (\frac{c}{3})*(\frac{c}{6}) = \frac{c^2}{18} && \\
-        \frac{47c^2}{40} + \frac{c^2}{18}
+        p(6)p(3) +p(6)p(2) +  p(6)p(1) +  p(4)p(1) +p(5)p(1) + p(5)p(2) &&\\
+        (\frac{c}{6} * \frac{c}{3} )+(\frac{c}{6} * \frac{c}{2} )+(\frac{c}{6} * c )
+        +(\frac{c}{4} * c )+(\frac{c}{5} * c )+(\frac{c}{5} * \frac{c}{2}) &&\\
+        (\frac{c^2}{18}) + (\frac{c^2}{12}) + (\frac{c^2}{6}) +  (\frac{c^2}{4}) + (\frac{c^2}{5}) + (\frac{c^2}{10}) \\
+        \frac{77c^2}{90}
     \end{flalign*}
     \subsection[3.c]{Find the value of c}
     \label{subsec:3c}

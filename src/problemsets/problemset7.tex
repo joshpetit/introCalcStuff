@@ -1,15 +1,160 @@
 %! Author = joshu
-%! Date = 9/27/20
+%! Date = 9/8/20
 
 % Preamble
 \documentclass[11pt]{article}
+\renewcommand{\thesubsection}{\thesection.\alph{subsection}}
+\newcommand{\bv}[2]{\big\vert_{#1}^{#2}}
+\usepackage{xcolor,cancel}
 
+\newcommand\hcancel[2][black]{\setbox0=\hbox{$#2$}%
+\rlap{\raisebox{.45\ht0}{\textcolor{#1}{\rule{\wd0}{1pt}}}}#2}
+\usepackage{hyperref}
 % Packages
 \usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsfonts}
 
 % Document
 \begin{document}
+    \section[Question 1]{}
+    \label{sec:1}
+    \subsection[1.a]{Find the value of c}
+    \label{subsec:1a}
+    \begin{flalign*}
+        \frac{ck + 1}{4} + c(\frac{1}{2})^k = 1 && \\
+        \frac{1}{4} + \frac{c + 1}{4} + \sum_{2}^{\infty} c(\frac{1}{2})^k = 1 \\
+        \frac{1}{4} + \frac{1}{4} + \frac{c}{4} + \sum_{2}^{\infty} c(\frac{1}{2})^k = 1 \\
+        \frac{1}{2} + \frac{c}{4} + \sum_{2}^{\infty}c(\frac{1}{2})^k = 1 \\
+        \frac{c}{4} + \sum_{2}^{\infty}c(\frac{1}{2})^k = \frac{1}{2} \\
+        \frac{c}{4} + \frac{c/4}{1-\frac{1}{2}} = \frac{1}{2} \\
+        c + \frac{c}{1/2} = 2 \\
+        3c = 2 \\
+        c= \frac{2}{3}
+    \end{flalign*}
 
+    \subsection[1.b]{Find $ P(10\leq X\leq 100)$}
+    \label{subsec:1b}
+    \begin{flalign*}
+        \sum_{k=m}^{n} r^k = r^m(\frac{1 - r^{n-m+1}}{1-r}) \\
+        \sum_{k=10}^{100} p(k) = \boxed{ \frac{2}{3}(\frac{1}{2})^{10} (\frac{1 - (\frac{1}{2})^{91}}{1-\frac{1}{2}})}&&\\
+    \end{flalign*}
 
+    \subsection[1.c]{Find the probability that $X$ is an even number $>$ than 2}
+    \label{subsec:1c}
+    \begin{flalign*}
+        P(x = 2k) &= \sum_{k=2}^{\infty} \frac{2}{3}(\frac{1}{2})^{2k}&& \\
+        &= \frac{2}{3} * \frac{(1/4)^2}{1 - \frac{1}{4}} \\
+        &= \frac{2}{3} * \frac{\frac{1}{16}}{(3/4)} \\
+        &= \frac{\frac{1}{8}}{\frac{9}{4}} = \boxed{\frac{1}{18}}
+    \end{flalign*}
+    \section[Question 2]{}
+    \label{sec:2}
+    \subsection[2.a]{}
+    \label{subsec:2a}
+    
+    \subsection[2.b]{}
+    \label{subsec:2b}
+    
+    \subsection[2.c]{Two geometric series that converge but $ \sum\frac{a_k}{b_k} $ diverge}
+    \label{subsec:2c}
+    This is not possible, because when two series converge, the $ \sum_{k=1}^{\infty}\frac{a_k}{b_k}$ must
+    converge
 
+    \section[Question 3]{}
+    \label{sec:3}
+    \subsection[3.a]{Explain why $ \sum_{k=1}^{\infty} a_k$ must converge}
+    \label{subsec:3a}
+    \begin{flalign*}
+        
+    \end{flalign*}
+
+    \section[Question 4]{}
+    \label{sec:4}
+    \subsection[4.a]{$ \sum_{k=1}^{\infty} 2^{-2k + 4} $}
+    \label{subsec:4a}
+    \begin{flalign*}
+        \lim_{k\to\infty}2^{-2k + 4} = 2^{-\infty} = 0 &&\\
+        \sum_{k=1}^{\infty} 2^{-2k} * 2^4 \\
+        \sum_{k=1}^{\infty} (\frac{1}{4})^k * 16 \\
+        16\sum_{k=1}^{\infty} (\frac{1}{4})^k = 16 * \frac{1/4}{1 - \frac{1}{4}}\\
+        \frac{4}{1- \frac{1}{4}}
+    \end{flalign*}
+    
+    \subsection[4.b]{$ \sum_{k=1}^{\infty} \frac{1}{k^2 + 4k +3}$}
+    \label{subsec:4b}
+    \begin{flalign*}
+        \lim_{k\to\infty} \frac{1}{k^2 + 4k +3} = 0 \\
+        \frac{1}{(k + 3) (k + 1)} && \\
+        \frac{A}{(k+3)} + \frac{B}{(k+1)} \\
+        A(k+1) + B(k+3) = 1 \\
+        A(-3+1)  = 1 && k = -3 && \\
+        -2A = 1 \\
+        A = -\frac{1}{2} \\
+        B(-1 + 3) = 1 && k= -1\\
+        2B = 1 \\
+        B = \frac{1}{2} \\
+        \frac{1}{2} \sum_{k=1}^{\infty} \frac{1}{k+1} -\frac{1}{k+3}dk\\
+        S_3 = (\frac{1}{2} - \frac{1}{4}) + (\frac{1}{3} - \frac{1}{5}) + (\frac{1}{4} - \frac{1}{6}) &&\\
+        S_n = \frac{1}{2} + \frac{1}{3} - \frac{1}{n+2} - \frac{1}{n+3}\\
+        S_n = \frac{5}{6} - \frac{1}{n+2} - \frac{1}{n+3} \\
+        \lim_{n\to\infty} S_n= \boxed{\frac{5}{6}} \\
+        \therefore\text{ Converges to $\frac{5}{6}$ by telescoping series test}
+    \end{flalign*}
+
+    \subsection[4.c]{ $\sum_{k=1}^{\infty}\frac{(2k)!}{7^k(k!)^2}$}
+    \label{subsec:4c}
+    \begin{flalign*}
+        \frac{(2(k+1))!}{7^{k+1}(k+1)!^2} * \frac{7^k(k!)^2}{(2k)!}&&\\
+        \frac{(2k + 2)!}{7^{k+1}(k+1)!^2} * \frac{7^k(k!)^2}{(2k)!}&&\\
+        \frac{(2k + 2)!}{7(k+1)(2k)!}\\
+        \frac{(2k + 2)(2k + 1)}{7(k+1)^2} \\
+        \lim_{k\to\infty}\frac{4k^2 + \dots}{7k^2+ \dots } \\
+        \frac{4}{7} < 1  \therefore\text{Convergent} \\
+    \end{flalign*}
+
+    % TODO: Finish
+    \subsection[4.d]{$ \sum_{k=1}^{\infty} \sin(\frac{1}{2^k})$}
+    \label{subsec:4d}
+    \begin{flalign*}
+        \sin(\frac{1}{2k}) < \frac{1}{2^k} &&\\
+        \lim_{k\to\infty} \frac{sin(\frac{1}{2^k})}{1/2^k} \\
+        \lim_{k\to\infty} \frac{sin(\frac{1}{2^k})}{1/2^k} = \frac{0}{0} \to\ LH\\
+        \lim_{k\to\infty} \frac{(\frac{1}{2})^kln(2) \cos(\frac{1}{2k})}{(1/2)^kln(2)}
+    \end{flalign*}
+What am I doing
+
+    \subsection[4.e]{$ \sum_{k=2}^{\infty} \frac{\ln(k)}{k^2}$}
+    \label{subsec:4e}
+    \begin{flalign*}
+        \lim_{k\to\infty} \frac{\ln(k)}{k^2} \to\ LH && \\
+        \lim_{k\to\infty} \frac{\frac{1}{k}}{2k} = 0 \\
+        \\
+        \frac{\ln(k+1)}{2(k+1)^2} * \frac{2k^2}{ln(k)} \\
+        \lim_{k\to\infty} \frac{2k^2* ln(k+1)}{2(k+1)^2 * ln(k)} \\
+        \lim_{k\to\infty} \frac{2k^2* ln(\frac{k+1}{k})}{2(k+1)^2} \\
+        \lim_{k\to\infty} \frac{2k^2* 0}{2(k+1)^2}\\
+        \lim_{k\to\infty} \frac{0}{2(k+1)^2} = 0 < 1 \\
+        \therefore\ \text{Converges because of Ratio Test}
+    \end{flalign*}
+
+    \subsection[4.f]{$ \sum_{k=1}^{\infty} k\sin(\frac{1}{k})$}
+    \label{subsec:4f}
+    \begin{flalign*}
+        \lim_{k\to\infty}\frac{\sin(\frac{1}{k})}{1/k} \to LH &&\\
+        \lim_{k\to\infty}\frac{-\frac{1}{k^2}\cos(\frac{1}{k})}{-\frac{1}{k^2}} \\
+        \lim_{k\to\infty} cos(\frac{1}{k}) = 1 \neq 0 \\
+        \therefore\ \text{Diverges because of limit test}
+    \end{flalign*}
+
+    \subsection[4.g]{$ \sum_{k=1}^{\infty}\frac{1}{k+e^k}$}
+    \label{subsec:4g}
+    \begin{flalign*}
+        \frac{1}{(k+1)+e^{k+1}} * \frac{k + e^k}{1} &&\\
+        \frac{k+e^k}{k+1+e^{k+1}} \\
+        \lim_{k\to\infty}\frac{k+e^k}{k+1+e^{k} * e} \to\ LH\\
+        \lim_{k\to\infty} \frac{1+e^k}{1 + e^{k+1}} \\
+        \lim_{k\to\infty} \frac{e^k}{e^{k+1}} = \frac{1}{e} < 1 \\
+        \therefore\ \text{Convergent ecause of ration test}\\
+    \end{flalign*}
 \end{document}
