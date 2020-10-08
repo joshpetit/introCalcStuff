@@ -2,7 +2,7 @@
   <profile version="1.0">
     <option name="myName" value="Project Default" />
     <inspection_tool class="LatexMissingImport" enabled="true" level="WARNING" enabled_by_default="true">
-      <option name="numberOfIndexedUsePackages" value="21" />
+      <option name="numberOfIndexedUsePackages" value="51" />
     </inspection_tool>
   </profile>
 </component>

@@ -1,15 +1,59 @@
 %! Author = joshu
-%! Date = 10/5/20
+%! Date = 10/05/20
 
 % Preamble
 \documentclass[11pt]{article}
+\title{Problem Set \# 8}
+\author{Joshua Petitma}
+\date{10/05/2020}
+\renewcommand{\thesubsection}{\thesection.\alph{subsection}}
+\newcommand{\bv}[2]{\big\vert_{#1}^{#2}}
+\usepackage{xcolor,cancel}
 
+\newcommand\hcancel[2][black]{\setbox0=\hbox{$#2$}%
+\rlap{\raisebox{.45\ht0}{\textcolor{#1}{\rule{\wd0}{1pt}}}}#2}
+\usepackage{hyperref}
 % Packages
 \usepackage{amsmath}
+\usepackage{amssymb}
 
 % Document
 \begin{document}
+    \maketitle
+    \section[Question 1]{}
+    \label{sec:1a}
+    \subsection[1.a]{$ \sum_{k=1}^{\infty} \frac{(-1)^k}{k\ln(k)}$}
+    \label{subsec:1a}
+    \begin{flalign*}
+        \lim_{k\to\infty} \frac{1}{k\ln(k)} = 0 && \\
+        S_n < S_{n+1} \therefore\ Converges\\
+        \frac{1}{kln(k)} < \frac{1}{k} \\
+        \frac{k}{1} * \frac{1}{kln(k)} = \frac{1}{\ln(k)}\\
+        \lim_{k\to\infty} \frac{1}{ln(k)} = 0 \therefore \text{Divergent because of LCT} \\
+        \text{Converges Conditionally}
+    \end{flalign*}
 
+    \label{sec:1b}
+    \subsection[1.b]{$ \sum_{k=1}^{\infty} (\frac{-4}{5})^k$}
+    \label{subsec:1b}
+    \begin{flalign*}
+        \frac{-4}{5} * \frac{1}{1 + \frac{4}{5}} &&\\
+        \frac{4}{5+4} \\
+        \box{\frac{4}{9}} \\ \text{Converges Absolutely}
+    \end{flalign*}
+
+    \subsection[1.c]{$ \sum_{k=1}^{\infty} \frac{(-4)^k}{k^2}$}
+    \label{subsec:1c}
+    \begin{flalign*}
+        \lim_{k\to\infty}\frac{(-4)^k}{k^2} \neq 0 \therefore Divergent &&
+    \end{flalign*}
+
+    \subsection[1.d]{$ \sum_{k=1}^{\infty} \frac{2 + (-1)^k}{k^2}$}
+    \label{subsec:1d}
+    \begin{flalign*}
+        &\lim_{k\to\infty}\frac{2 + 1}{k^2} && \\
+        &\frac{3}{k^2}\ 2 > 1 \therefore\ \text{Convergent because of p-series}
+    \end{flalign*}
 
 
 \end{document}
