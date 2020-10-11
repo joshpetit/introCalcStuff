@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2020.10.4)  7 OCT 2020 20:14
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2020.10.4)  8 OCT 2020 20:54
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -318,19 +318,19 @@ LaTeX Font Info:    Trying to load font information for U+msb on input line 23.
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-./problemset8.tex:43: Missing number, treated as zero.
+./problemset8.tex:44: Missing number, treated as zero.
 <to be read again> 
                    {
-l.43     \end{flalign*}
+l.44     \end{flalign*}
                        
 A number should have been here; I inserted `0'.
 (If you can't figure out why I needed to see a number,
 look up `weird error' in the index to The TeXbook.)
 
-./problemset8.tex:43: Missing number, treated as zero.
+./problemset8.tex:44: Missing number, treated as zero.
 <to be read again> 
                    {
-l.43     \end{flalign*}
+l.44     \end{flalign*}
                        
 A number should have been here; I inserted `0'.
 (If you can't figure out why I needed to see a number,
@@ -338,43 +338,46 @@ look up `weird error' in the index to The TeXbook.)
 
 [1
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 59.
- [2]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 59.
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [2] [3] [4]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 172.
+ [5]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 172.
 
 (/home/joshu/schoolStuff/math/mathLatex/out/problemsets/problemset8.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 59.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 59.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 172.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 172.
 Package rerunfilecheck Info: File `problemset8.out' has not changed.
 (rerunfilecheck)             Checksum: <no file>.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 59.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 172.
  ) 
 Here is how much of TeX's memory you used:
- 6477 strings out of 481239
- 94273 string characters out of 5920377
- 360056 words of memory out of 5000000
- 21643 multiletter control sequences out of 15000+600000
- 539742 words of font info for 52 fonts, out of 8000000 for 9000
+ 6537 strings out of 481239
+ 95008 string characters out of 5920377
+ 363517 words of memory out of 5000000
+ 21684 multiletter control sequences out of 15000+600000
+ 542688 words of font info for 65 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 34i,10n,37p,227b,327s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 34i,13n,37p,227b,327s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></us
 r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/shar
 e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texl
-ive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texlive/tex
-mf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist
-/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/
-type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/p
-ublic/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/a
-msfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/
-cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy1
-0.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb><
-/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb>
+ive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/te
+xmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texlive/texmf-dis
+t/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts
+/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/
+public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/
+amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfont
+s/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cm
+r6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb><
+/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/sha
+re/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/tex
+live/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/te
+xmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb>
 Output written on /home/joshu/schoolStuff/math/mathLatex/out/problemsets/proble
-mset8.pdf (2 pages, 116991 bytes).
+mset8.pdf (5 pages, 159579 bytes).
 PDF statistics:
- 92 PDF objects out of 1000 (max. 8388607)
- 74 compressed objects within 1 object stream
- 8 named destinations out of 1000 (max. 500000)
- 41 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 176 PDF objects out of 1000 (max. 8388607)
+ 151 compressed objects within 2 object streams
+ 25 named destinations out of 1000 (max. 500000)
+ 153 words of extra memory for PDF output out of 10000 (max. 10000000)
 
