@@ -25,12 +25,12 @@
     \subsection[1.a]{$ \sum_{k=1}^{\infty} \frac{(-1)^k}{k\ln(k)}$}
     \label{subsec:1a}
     \begin{flalign*}
-        \lim_{k\to\infty} \frac{1}{k\ln(k)} = 0 && \\
-        S_n < S_{n+1} \therefore\ Converges\\
-        \frac{1}{kln(k)} < \frac{1}{k} \\
-        \frac{k}{1} * \frac{1}{kln(k)} = \frac{1}{\ln(k)}\\
-        \lim_{k\to\infty} \frac{1}{ln(k)} = 0 \therefore \text{Divergent because of LCT} \\
-        \text{Converges Conditionally}
+        &\lim_{k\to\infty} \frac{1}{k\ln(k)} = 0 && \\
+        &S_n < S_{n+1} \therefore\ Converges\\
+        &\frac{1}{kln(k)} < \frac{1}{k} \\
+        &\frac{k}{1} * \frac{1}{kln(k)} = \frac{1}{\ln(k)}\\
+        &\lim_{k\to\infty} \frac{1}{ln(k)} = 0 \therefore \text{Divergent because of LCT} \\
+        &\text{Converges Conditionally}
     \end{flalign*}
 
     \label{sec:1b}
@@ -39,7 +39,8 @@
     \begin{flalign*}
         \frac{-4}{5} * \frac{1}{1 + \frac{4}{5}} &&\\
         \frac{4}{5+4} \\
-        \box{\frac{4}{9}} \\ \text{Converges Absolutely}
+        \box{\frac{4}{9}} \\
+        \text{Converges Absolutely}
     \end{flalign*}
 
     \subsection[1.c]{$ \sum_{k=1}^{\infty} \frac{(-4)^k}{k^2}$}
@@ -52,7 +53,119 @@
     \label{subsec:1d}
     \begin{flalign*}
         &\lim_{k\to\infty}\frac{2 + 1}{k^2} && \\
-        &\frac{3}{k^2}\ 2 > 1 \therefore\ \text{Convergent because of p-series}
+        &\frac{3}{k^2}\ 2 > 1 \therefore\ \text{Convergent because of p-series}\\
+        &\frac{2 + (-1)^k}{k^2} \leq \frac{3}{k^2}\ \therefore \text{Converges absolutely bc of CT}
+    \end{flalign*}
+
+    \subsection[1.e]{$ (-1)^k\sin(\frac{1}{k})$}
+    \label{subsec:1e}
+    \begin{flalign*}
+        &\lim_{k\to\infty} a_k = 0 &&\\
+        &S_n < S_{n+1} \therefore \text{Convergent b/c of AST} \\
+        &\sum_{k=1}^{\infty} \sin(\frac{1}{k}) \\
+        &\sin(\frac{1}{k})\ \text{Compare too}\ \frac{1}{k} \\
+        &\frac{k}{1} * \sin(\frac{1}{k}) \\
+        &\lim_{k\to\infty} \frac{sin(\frac{1}{k})}{\frac{1}{k}} \\
+        &-\frac{cos(\frac{1}{k}) * -\frac{1}{k^2}}{\frac{1}{k^2}}= -\frac{1}{0} \therefore \text{Converges Conditionally b/c LCT} \\
+    \end{flalign*}
+    
+    \subsection[1.f]{$ \sum_{k=1}^{\infty} (-1)^k k\arctan(\frac{1}{k})$}
+    \label{subsec:1f}
+    \begin{flalign*}
+       &\lim_{k\to\infty} \frac{\tan^{-1}(\frac{1}{k})}{\frac{1}{k}} = \frac{tan^{-1}(0)}{0} = \frac{\pi/2}{0} \therefore\ \text{Divergent bc of test for divergence}
+    \end{flalign*}
+
+    \subsection[1.g]{$ (-1)^k \cos(\frac{1}{k})$}
+    \label{subsec:1g}
+    \begin{flalign*}
+        \lim_{k\to\infty}\cos(\frac{1}{k}) = 1\ \therefore\ \text{Divergent bc of limit test}
+    \end{flalign*}
+
+    \subsection[1.h]{$ \sum_{k=1}^{\infty} \frac{(-1)^k k}{\sqrt{k^3 -1}}$}
+    \label{subsec:1h}
+    \begin{flalign*}
+        &\lim_{k\to\infty} \frac{(-1)^kk}{\sqrt{k^3 - 1}} = 0  \\
+        &S_n < S_n+1\ \therefore\ \text{Converges bc of AST} \\
+        &\frac{k}{\sqrt{k^3 - 1}} > \frac{k}{\sqrt{k^3}} \\
+        &\frac{1}{\sqrt{k}}\\
+        &\frac{\sqrt{k}}{1} * \frac{k}{\sqrt{k^3 - 1}} \\
+        &\lim_{k\to\infty}\frac{\sqrt{k^3}}{\sqrt{k^3 - 1}} = 1 \ \therefore \text{Converges Absolutely bc of LCT}
+    \end{flalign*}
+
+    \section[Question 2]{$ a_k = \frac{(-1)^k}{k^2 + 1}$}
+    \label{sec:2}
+    \subsection[2.a]{Show sum converges}
+    \label{subsec:2a}
+    \begin{flalign*}
+        &\lim_{k\to\infty} a_k = 0 \\
+        &\frac{(-1)^k}{k^2 + 1} < \frac{1}{k^2}\ \therefore\ \text{Converges bc of comparison test} \\
+    \end{flalign*}
+
+    \subsection[2b]{Find error upperbound with 10}
+    \label{subsec:2b}
+    \begin{flalign*}
+        E_{10} < |S_{11}| = \frac{1}{122}
+    \end{flalign*}
+
+    \subsection[2.c]{Find smallest value so differences of sum to infty and sum to n is $< \frac{1}{101}$}
+    \label{subsec:2c}
+    \begin{flalign*}
+        a_{n+1} < \frac{1}{101} \\
+        \frac{1}{(n+1)^2 + 1} < \frac{1}{101} \\
+        \boxed{n \leq 9}\\
+    \end{flalign*}
+
+    \subsection[2.d]{Find an upperbound}
+    \label{subsec:2d}
+    \begin{flalign*}
+        E_{10} < \lim_{a\to\infty}\int_{10}^{a} \frac{1}{k^2 + 1} \\
+        \tan^{-1}(k) \bv{10}{a} \\
+        \boxed{\frac{\pi}{2} - \tan^{-1}(10)} \\
+    \end{flalign*}
+
+    \section[Question 3]{}
+    \label{sec:3}
+    \begin{flalign*}
+       &a_k = \frac{(-1)^k}{k^2}:\ E_{100} < \frac{1}{10000} \\
+       &b_k = \frac{2}{k^3}:\ E_{100} < \frac{2}{1000000} \\
+       &E_{100}\ \text{for}\ a_k < E_{100}\ \text{for}\ b_k\ \therefore\ \text{$ a_k$ aprox. is better}
+    \end{flalign*}
+
+    \section[Question 4]{}
+    \label{sec:4}
+    \subsection[4.a]{}
+    \label{subsec:4a}
+    \begin{flalign*}
+        \int_{11}^{\infty} a_k < E_n < \int_{10}^{\infty} a_k
+    \end{flalign*}
+
+    \subsection[4.b]{}
+    \label{subsec:4b}
+    \begin{flalign*}
+       \int_{3}^{\infty} f(x) + \frac{5n}{2n+5} < \int_{2}^{\infty} f(x)
+    \end{flalign*}
+    Adding the sum brings the lower bound closer to the actual value
+
+    \subsection[4.c]{$ a_k=ke^{-k^2}$}
+    \label{subsec:4c}
+    \begin{flalign*}
+        E_n < \int_{n}^{\infty} xe^{-x^2}dx && u &= -x^2 && \\
+         && du &=-2xdx && \\
+        -\frac{1}{2} \int e^u du \\
+        \lim_{a\to\infty} e^{-k^2} \bv{n}{\infty} \\
+        -\frac{1}{2}( 0 - e^{-n^2}) \\
+        \frac{1}{2e^{n^2}} \leq \frac{1}{100} \\
+        \frac{1}{e^{n^2}} \leq \frac{1}{50} \\
+        e^{n^2} \leq 50 \\
+        \ln(50) \leq n^2 \\
+        \boxed{\sqrt{\ln(50)} \leq n}
+%        a_{n} \leq \frac{1}{100} \\
+%        (n)e^{-(n^2)} \leq \frac{1}{100} \\
+%        e^{-{n^2}} \leq \frac{1}{100n} \\
+%        \frac{n}{e^{n^2}} \leq \frac{1}{100} \\
+%        \frac{n}{e^{n^2}} \leq \frac{1}{100} \\
+%        e^{n^2} \leq 100n \\
+%        \ln(100n) \leq n^2 \\
     \end{flalign*}
 
 
