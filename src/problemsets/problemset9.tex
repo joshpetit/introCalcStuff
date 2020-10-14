@@ -25,28 +25,126 @@
     \subsection[1.a]{}
     \label{subsec:1a}
     \begin{flalign*}
-        \lim_{k\to\infty} \frac{a_k}{k} = a_k * \lim_{k\to\infty} \frac{1}{k} = a_k * Divergent \therefore\ \text{Divergent} \\
+        &\frac{a_k}{k} < a_k \therefore \text{Must be Convergent bc of Comparison test} &&\\
     \end{flalign*}
 
     \subsection[1.b]{$ \sum_{k=1}^{\infty} \sqrt{a_k}$}
     \label{subsec:1b}
     \begin{flalign*}
-        a_k = \frac{1}{k^2} && \frac{1}{\sqrt{k^2}}& && \\
-        && \frac{1}{k} &= Divergnet &&\\
-        a_k = \frac{1}{k^3} &&  \frac{1}{k^3}& \\
-        && \frac{1}{k^{3/2}}&\ \therefore\ \text{Convergent bc p-series}
+        &a_k = \frac{1}{k^2} && \frac{1}{\sqrt{k^2}}& && \\
+        && \frac{1}{k} &= \text{Divergence bc p-series} &&\\
+        &a_k = \frac{1}{k^3} &&  \frac{1}{k^3}& \\
+        && \frac{1}{k^{3/2}}&\ \therefore\ \text{Convergent bc p-series}\\
+        &\boxed{\text{Impossible to decide}} &&
     \end{flalign*}
-    Not enough information to tell
 
     \subsection[1.c]{$ \sum_{k=1}^{\infty} \sin(a_k)$}
     \label{subsec:1c}
     \begin{flalign*}
-        &a_k > 0 &&\\
-        &\lim_{k\to\infty} \sin(a_k) = \sin(c) \ c \neq 0 \therefore Divergent &&
+        &sin(a_k)\ \text{comp to } a_k &&\\
+        &\lim_{k\to\infty} \frac{\sin(a_k)}{a_k} \\
+        &\lim_{k\to0} \frac{\sin(x)}{x} \to LH\\
+        &\cos(x) = 1\ \therefore \text{Must be convergent bc LCT}
     \end{flalign*}
 
-    \subsection[1.d]{$ \sum_{k=1}^{\infty} $}
+    \subsection[1.d]{$ \cos(a_k)$}
     \label{subsec:1d}
+    \begin{flalign*}
+        \lim_{k\to\infty} \cos(a_k) = \cos(0) = 1 \therefore \text{Must diverge bc Test for divergence}
+    \end{flalign*}
+    
+    \subsection[1.e]{$ \sum_{k=1}^{\infty} \cos(k)a_k$}
+    \label{subsec:1e}
+    \begin{flalign*}
+        |\cos(k)a_k |\ \leq |a_k| \therefore \text{Converge bc of Comparison test} \\
+        \text{Must converge bc of Absolute Convergence Test}
+    \end{flalign*}
+
+    \subsection[1.f]{}
+    \label{subsec:1f}
+    \begin{flalign*}
+        &a_k = \frac{1}{k^2} &&\\
+        &b_k = \frac{1}{k^2}\\
+        &\lim_{k\to\infty} \frac{1/k^2}{1/k^2} = 1 \therefore \text{Diverge because of limit test}\\
+        &a_k = \frac{1}{k^4} \\
+        &b_k = \frac{1}{k^2} \\
+        &\lim_{k\to\infty}\frac{1}{k^4} * \frac{k^2}{1} \\
+        &\frac{1}{k^2} \therefore \text{Converge because of p-series}\\
+        &\boxed{\text{Impossible to decide}}
+    \end{flalign*}
+
+    \subsection[1.g]{$ \arctan(\frac{1}{a_k})$}
+    \label{subsec:1g}
+    \begin{flalign*}
+        &\text{If $a_k$ converges, $ \lim_{k\to\infty}a_k = 0$} &&\\
+        &\lim_{k\to\infty}\arctan(\frac{1}{0}) = \arctan(\infty) = \frac{\pi}{2} \neq 0\\
+        &\therefore\ \text{Must diverge, test for divergence}
+    \end{flalign*}
+
+    \section[Question 2]{}
+    \label{sec:2}
+    \subsection[2.a]{}
+    \label{subsec:2a}
+    \begin{flalign*}
+        &f(x) = e^{x^2},\ f(0) = 1 &&\\
+        &f'(x) = 2x*e^{x^2},\ f'(0) = 0\\
+        &f''(x) = 4x^2 * e^{x^2} + 2e^{x^2} \\
+        &f''(0) = 2\\
+        &T_3 (x) = 1 + \frac{2(x)^2}{2!} = 1 + x^2\\
+    \end{flalign*}
+
+    \subsection[2.b]{}
+    \label{subsec:2b}
+    \begin{flalign*}
+        T_3(\frac{1}{10}) &= 1 + (\frac{1}{10})^2 &&\\
+        &=1 + \frac{1}{100} = \boxed{\frac{101}{100}}
+    \end{flalign*}
+
+    \subsection[2.c]{}
+    \subsection[2.c]{}
+    \label{subsec:2c}
+    \begin{flalign*}
+        &\int_{0}^{\frac{1}{10}} T_3 (x)dx && \\
+        &\int_{0}^{\frac{1}{10}} 1 + x^2 dx \\
+        &(x + \frac{x^3}{3})\bv{0}{\frac{1}{10}} \\
+        &(\frac{1}{10} + \frac{1}{3000}) - 0 = \frac{301}{3000}
+    \end{flalign*}
+
+
+
+    \section[Question 3]{}
+    \label{sec:3}
+    \subsection[3.a]{}
+    \label{subsec:3a}
+    \begin{flalign*}
+        &f(x),\ f(1) = 0 &&\\
+        &f'(x) = \frac{1}{x} * x + \ln(x),\ f'(1) = 1 + 0 = 1 \\
+        &f''(x) = \frac{1}{x},\ f''(1) = 1\\
+        &f'''(x) = -\frac{1}{x^2},\ f'''(1) = -1 \\
+        &\boxed{T_3(x) = 0 + 1(x-1) + \frac{1 (x-1)^2}{2!} + -\frac{1(x-1)^3}{3!}}
+    \end{flalign*}
+
+    \subsection[3.b]{}
+    \label{subsec:3b}
+    \begin{flalign*}
+        &f(x),\ f(1) = \sqrt{2} &&\\
+        &f'(x) = \frac{1}{2}(1+x)^{-1/2},\ f'(1) = \frac{1}{2\sqrt{2}}\\
+        &f''(x) = -\frac{1}{4}(1 + x)^{-3/2},\ f''(1) = -\frac{1}{4\sqrt{8}}\\
+        &f'''(x) = \frac{3}{8}(1 + x)^{-5/2},\ f'''(1) = \frac{3}{8\sqrt{32}}\\
+        &\boxed{T_3(x) = \sqrt{2} + \frac{\frac{1}{2\sqrt{2}}(x-1)}{1!} - \frac{\frac{1}{4\sqrt{8}}(x-1)^2}{2!}
+        + \frac{\frac{3}{8\sqrt{32}}(x-1)^2}{3!}} \\
+    \end{flalign*}
+
+    \subsection[3.c]{}
+    \label{subsec:3c}
+    \begin{flalign*}
+
+    \end{flalign*}
+
+    \section[Question 4]{}
+    \label{sec:4}
+    \subsection[4.a]{}
+    \label{subsec:4a}
     \begin{flalign*}
 
     \end{flalign*}
