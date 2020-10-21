@@ -88,8 +88,8 @@
     \begin{flalign*}
         &f(x) = e^{x^2},\ f(0) = 1 &&\\
         &f'(x) = 2x*e^{x^2},\ f'(0) = 0\\
-        &f''(x) = 4x^2 * e^{x^2} + 2e^{x^2} \\
-        &f''(0) = 2\\
+        &f''(x) = 4x^2 * e^{x^2} + 2e^{x^2},\ f''(0) = 2\\
+        &f'''(x) = 4x^2 *2x*e^{x^2} + e^{x^2} * 8x + 2x* 2e^{x^2},\ f'''(0) = 0 \\
         &T_3 (x) = 1 + \frac{2(x)^2}{2!} = 1 + x^2\\
     \end{flalign*}
 
@@ -100,7 +100,6 @@
         &=1 + \frac{1}{100} = \boxed{\frac{101}{100}}
     \end{flalign*}
 
-    \subsection[2.c]{}
     \subsection[2.c]{}
     \label{subsec:2c}
     \begin{flalign*}
@@ -139,10 +138,10 @@
     \label{subsec:3c}
     \begin{flalign*}
         &f(x),\ f(\pi/4) = \tan(\pi/4) = 1 &&\\
-        &f'(x) =\ \sec^2(x),\ f''(\pi/4) =\sec^2(\pi/4) = 1 \\
-        &f''(x) = 2\sec(x) * sec(x)tan(x),\ f''(\pi/4) = 2 \\
-        &T_2(x) = 1 + 1 (x - \frac{\pi}{4}) + \frac{2 (x - \frac{\pi}{4})^2}{2!} \\
-        &T_2(x) = 1+ (x - \frac{\pi}{4}) + (x - \frac{\pi}{4})^2
+        &f'(x) =\ \sec^2(x),\ f''(\pi/4) =\sec^2(\pi/4) = 2 \\
+        &f''(x) = 2\sec(x) * sec(x)tan(x),\ f''(\pi/4) = 4 \\
+        &T_2(x) = 1 + 2(x - \frac{\pi}{4}) + \frac{4 (x - \frac{\pi}{4})^2}{2!} \\
+        &T_2(x) = 1+ 2(x - \frac{\pi}{4}) + 2(x - \frac{\pi}{4})^2
     \end{flalign*}
 
     \section[Question 4]{}
@@ -206,25 +205,26 @@
     \label{subsec:5c}
     \begin{flalign*}
         &\lim_{x\to0} \frac{f(1) - 1}{f'''(2)} = \frac{0}{0} \to LH &&\\
-        &\lim_{x\to0} \frac{f'(e^x) - 1}{f^4(2x + 2)} = \frac{2 - 1}{48} = \boxed{\frac{1}{48}}
+        &\lim_{x\to0} \frac{e^x*f'(e^x)}{2*f^4(2x + 2)} = \frac{2}{2 * 48} = \boxed{\frac{1}{48}}
     \end{flalign*}
 
     \subsection[5.d]{}
     \label{subsec:5d}
     \begin{flalign*}
-        &g(x) = that,\ g(1) = e^{(f(1)^2)} = e^1 &&\\
-        &g'(x) = 2f(x) * f'(x) * e^{f(x)^2},\ g'(1) = 2*2*e = 4e \\
-        &T_1(x) = e + 4e (x - 1)
+        &g(x) = that,\ g(1) = e^{(f(2)^2)} = e^{49} &&\\
+        &g'(x) = 2f(x) * f'(x) * e^{f(x)^2},\ g'(2) = 14*3*e^{49} = 42e^{49} \\
+        &T_1(x) = e^{49} + 42e^{49}(x - 1)
     \end{flalign*}
 
     \subsection[5.e]{}
     \label{subsec:5e}
     \begin{flalign*}
         &h(x) = that,\ h(1) = f(1) = 1 &&\\
-        &h'(x) = f'(1 + sin(\pi x)),\ h'(1) = f'(1) = 2 \\
-        &h''(x) = f''(1 + \sin(\pi x)), \h''(1) = f''(1) = 2\\
-        &T_2(x) = 1 + 2(x-1) + \frac{2(x-1)^2}{2!} \\
-        &T_2(x) = 1 + 2(x-1) + (x-1)^2 \\
+        &h'(x) = \pi\cos(\pi x)*f'(1 + sin(\pi x)),\ h'(1) = -\pi * f'(1) = -2\pi \\
+        &h''(x) = \pi\cos(\pi x) * f''(1 + \sin(\pi x)) * \pi\cos(\pi x) - f'(1 + \sin(\pi x)) * \pi\sin(\pi x)\\
+        & = \pi^2 * f''(1) = \pi^2 * 2 = 2\pi^2 \\
+        &T_2(x) = 1 - 2\pi(x-1) + \frac{2\pi^2(x-1)^2}{2!} \\
+        &T_2(x) = 1 + 2\pi(x-1) + \pi^2 (x-1)^2 \\
     \end{flalign*}
 
 
